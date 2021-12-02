@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		790242C62759473300F8E5ED /* MockJsonPlaceholderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790242C52759473300F8E5ED /* MockJsonPlaceholderService.swift */; };
+		790242C92759658400F8E5ED /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = 790242C82759658400F8E5ED /* users.json */; };
+		790242CB275975B300F8E5ED /* UserViewControllerViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790242CA275975B300F8E5ED /* UserViewControllerViewModelTests.swift */; };
 		79608D5B275839DF0033711B /* JsonPlaceholderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79608D5A275839DF0033711B /* JsonPlaceholderService.swift */; };
 		79608D5D27583F880033711B /* UserViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79608D5C27583F880033711B /* UserViewControllerViewModel.swift */; };
 		79608D5F275841220033711B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79608D5E275841220033711B /* User.swift */; };
@@ -16,7 +18,6 @@
 		799876742758377F00469155 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799876732758377F00469155 /* UserViewController.swift */; };
 		799876792758378000469155 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 799876782758378000469155 /* Assets.xcassets */; };
 		7998767C2758378000469155 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7998767A2758378000469155 /* LaunchScreen.storyboard */; };
-		79A2FC26275946E80011FC65 /* ServiceLayerExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A2FC25275946E80011FC65 /* ServiceLayerExampleTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,8 @@
 
 /* Begin PBXFileReference section */
 		790242C52759473300F8E5ED /* MockJsonPlaceholderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockJsonPlaceholderService.swift; sourceTree = "<group>"; };
+		790242C82759658400F8E5ED /* users.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
+		790242CA275975B300F8E5ED /* UserViewControllerViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewControllerViewModelTests.swift; sourceTree = "<group>"; };
 		79608D5A275839DF0033711B /* JsonPlaceholderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonPlaceholderService.swift; sourceTree = "<group>"; };
 		79608D5C27583F880033711B /* UserViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewControllerViewModel.swift; sourceTree = "<group>"; };
 		79608D5E275841220033711B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -42,7 +45,6 @@
 		7998767B2758378000469155 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7998767D2758378000469155 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79A2FC23275946E80011FC65 /* ServiceLayerExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ServiceLayerExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		79A2FC25275946E80011FC65 /* ServiceLayerExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLayerExampleTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,11 +65,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		790242C72759656C00F8E5ED /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				790242C82759658400F8E5ED /* users.json */,
+			);
+			path = Fixtures;
+			sourceTree = "<group>";
+		};
 		79608D572758397D0033711B /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				799876732758377F00469155 /* UserViewController.swift */,
 				79608D5C27583F880033711B /* UserViewControllerViewModel.swift */,
+				790242CA275975B300F8E5ED /* UserViewControllerViewModelTests.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -125,7 +136,7 @@
 		79A2FC24275946E80011FC65 /* ServiceLayerExampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				79A2FC25275946E80011FC65 /* ServiceLayerExampleTests.swift */,
+				790242C72759656C00F8E5ED /* Fixtures */,
 			);
 			path = ServiceLayerExampleTests;
 			sourceTree = "<group>";
@@ -220,6 +231,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				790242C92759658400F8E5ED /* users.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,7 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				790242C62759473300F8E5ED /* MockJsonPlaceholderService.swift in Sources */,
-				79A2FC26275946E80011FC65 /* ServiceLayerExampleTests.swift in Sources */,
+				790242CB275975B300F8E5ED /* UserViewControllerViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

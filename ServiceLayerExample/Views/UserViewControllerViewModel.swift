@@ -9,6 +9,7 @@ import Combine
 import Foundation
 
 final class UserViewControllerViewModel: ObservableObject {
+
     @Published var users: [User] = []
 
     private let service: JsonPlaceholderServiceProtocol
@@ -19,11 +20,11 @@ final class UserViewControllerViewModel: ObservableObject {
         retrieveUsers()
     }
 
-    func retrieveUsers() {
-        service.fetch(.users) { (response: Result<[User], Error>) in
-            switch response {
-            case .success(let retrievedUsers):
-                self.users = retrievedUsers.sorted(by: { $0.name < $1.name })
+    private func retrieveUsers() {
+        service.fetchUsers { [weak self] result in
+            switch result {
+            case .success(let users):
+                self?.users = users.sorted(by: { $0.name < $1.name })
             case .failure(let error):
                 print("Error retrieving users: \(error.localizedDescription)")
             }
