@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		790242C62759473300F8E5ED /* MockJsonPlaceholderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790242C52759473300F8E5ED /* MockJsonPlaceholderService.swift */; };
 		79608D5B275839DF0033711B /* JsonPlaceholderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79608D5A275839DF0033711B /* JsonPlaceholderService.swift */; };
 		79608D5D27583F880033711B /* UserViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79608D5C27583F880033711B /* UserViewControllerViewModel.swift */; };
 		79608D5F275841220033711B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79608D5E275841220033711B /* User.swift */; };
@@ -15,9 +16,21 @@
 		799876742758377F00469155 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799876732758377F00469155 /* UserViewController.swift */; };
 		799876792758378000469155 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 799876782758378000469155 /* Assets.xcassets */; };
 		7998767C2758378000469155 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7998767A2758378000469155 /* LaunchScreen.storyboard */; };
+		79A2FC26275946E80011FC65 /* ServiceLayerExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79A2FC25275946E80011FC65 /* ServiceLayerExampleTests.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		79A2FC27275946E80011FC65 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 799876642758377F00469155 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7998766B2758377F00469155;
+			remoteInfo = ServiceLayerExample;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		790242C52759473300F8E5ED /* MockJsonPlaceholderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockJsonPlaceholderService.swift; sourceTree = "<group>"; };
 		79608D5A275839DF0033711B /* JsonPlaceholderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonPlaceholderService.swift; sourceTree = "<group>"; };
 		79608D5C27583F880033711B /* UserViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewControllerViewModel.swift; sourceTree = "<group>"; };
 		79608D5E275841220033711B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -28,10 +41,19 @@
 		799876782758378000469155 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7998767B2758378000469155 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7998767D2758378000469155 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79A2FC23275946E80011FC65 /* ServiceLayerExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ServiceLayerExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		79A2FC25275946E80011FC65 /* ServiceLayerExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLayerExampleTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		799876692758377F00469155 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79A2FC20275946E80011FC65 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -54,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				79608D5A275839DF0033711B /* JsonPlaceholderService.swift */,
+				790242C52759473300F8E5ED /* MockJsonPlaceholderService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -70,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				7998766E2758377F00469155 /* ServiceLayerExample */,
+				79A2FC24275946E80011FC65 /* ServiceLayerExampleTests */,
 				7998766D2758377F00469155 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -78,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				7998766C2758377F00469155 /* ServiceLayerExample.app */,
+				79A2FC23275946E80011FC65 /* ServiceLayerExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,6 +120,14 @@
 				7998767D2758378000469155 /* Info.plist */,
 			);
 			path = ServiceLayerExample;
+			sourceTree = "<group>";
+		};
+		79A2FC24275946E80011FC65 /* ServiceLayerExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				79A2FC25275946E80011FC65 /* ServiceLayerExampleTests.swift */,
+			);
+			path = ServiceLayerExampleTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -117,6 +150,24 @@
 			productReference = 7998766C2758377F00469155 /* ServiceLayerExample.app */;
 			productType = "com.apple.product-type.application";
 		};
+		79A2FC22275946E80011FC65 /* ServiceLayerExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79A2FC2B275946E80011FC65 /* Build configuration list for PBXNativeTarget "ServiceLayerExampleTests" */;
+			buildPhases = (
+				79A2FC1F275946E80011FC65 /* Sources */,
+				79A2FC20275946E80011FC65 /* Frameworks */,
+				79A2FC21275946E80011FC65 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				79A2FC28275946E80011FC65 /* PBXTargetDependency */,
+			);
+			name = ServiceLayerExampleTests;
+			productName = ServiceLayerExampleTests;
+			productReference = 79A2FC23275946E80011FC65 /* ServiceLayerExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -129,6 +180,10 @@
 				TargetAttributes = {
 					7998766B2758377F00469155 = {
 						CreatedOnToolsVersion = 13.1;
+					};
+					79A2FC22275946E80011FC65 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 7998766B2758377F00469155;
 					};
 				};
 			};
@@ -146,6 +201,7 @@
 			projectRoot = "";
 			targets = (
 				7998766B2758377F00469155 /* ServiceLayerExample */,
+				79A2FC22275946E80011FC65 /* ServiceLayerExampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -157,6 +213,13 @@
 			files = (
 				7998767C2758378000469155 /* LaunchScreen.storyboard in Resources */,
 				799876792758378000469155 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79A2FC21275946E80011FC65 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,7 +239,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		79A2FC1F275946E80011FC65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				790242C62759473300F8E5ED /* MockJsonPlaceholderService.swift in Sources */,
+				79A2FC26275946E80011FC65 /* ServiceLayerExampleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		79A2FC28275946E80011FC65 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7998766B2758377F00469155 /* ServiceLayerExample */;
+			targetProxy = 79A2FC27275946E80011FC65 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		7998767A2758378000469155 /* LaunchScreen.storyboard */ = {
@@ -360,6 +440,52 @@
 			};
 			name = Release;
 		};
+		79A2FC29275946E80011FC65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F5RYHB52XL;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Josh.ServiceLayerExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ServiceLayerExample.app/ServiceLayerExample";
+			};
+			name = Debug;
+		};
+		79A2FC2A275946E80011FC65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F5RYHB52XL;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Josh.ServiceLayerExampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ServiceLayerExample.app/ServiceLayerExample";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -377,6 +503,15 @@
 			buildConfigurations = (
 				799876812758378000469155 /* Debug */,
 				799876822758378000469155 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79A2FC2B275946E80011FC65 /* Build configuration list for PBXNativeTarget "ServiceLayerExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79A2FC29275946E80011FC65 /* Debug */,
+				79A2FC2A275946E80011FC65 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
