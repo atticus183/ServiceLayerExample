@@ -7,10 +7,13 @@
 
 import Foundation
 
+// 1 - This will be the type that is passed into the `UserViewControllerViewModel`.
+// This will also be used to "mock" the service.
 protocol JsonPlaceholderServiceProtocol {
     func fetchUsers(completion: @escaping (Result<[User], Error>) -> Void)
 }
 
+// 2 - A concrete implementation of the JsonPlaceholder service.
 final class JsonPlaceholderService: JsonPlaceholderServiceProtocol {
 
     // MARK: Types
@@ -33,6 +36,8 @@ final class JsonPlaceholderService: JsonPlaceholderServiceProtocol {
 
     // MARK: Methods
 
+    // 3 - this method will retrieve the user objects from the /users endpoint.
+    // This method will be mocked.
     func fetchUsers(completion: @escaping (Result<[User], Error>) -> Void) {
         guard let url = URL(string: baseUrlString + Endpoint.users.rawValue) else { return }
 
@@ -42,8 +47,8 @@ final class JsonPlaceholderService: JsonPlaceholderServiceProtocol {
             }
 
             do {
-                let response = try JSONDecoder.userDecoder().decode([User].self, from: data!)
-                completion(.success(response))
+                let users = try JSONDecoder.userDecoder().decode([User].self, from: data!)
+                completion(.success(users))
             } catch let err {
                 completion(.failure(err))
             }

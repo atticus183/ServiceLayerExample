@@ -22,6 +22,7 @@ class UserViewControllerViewModelTests: XCTestCase {
         subject = UserViewControllerViewModel(service: mockJsonPlaceholderServiceProtocol)
     }
 
+    // 1 - ensures the `fetchUsers` method of the JsonPlaceholderServiceProtocol properly decodes the JSON into `User` objects.
     func testFetchUsers() {
         //method `retrieveUsers` call in the UserViewControllerViewModel's init.  This occurs in the setUp method above.
         XCTAssertEqual(subject.users.count, 10)

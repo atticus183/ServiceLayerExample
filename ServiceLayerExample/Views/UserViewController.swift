@@ -41,6 +41,7 @@ final class UserViewController: UIViewController {
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
         ])
 
+        // 1 - Subscribes to the viewModel to be notified with it changes
         viewModel.objectWillChange
             .receive(on: RunLoop.main)
             .sink { [weak self] in
@@ -58,9 +59,16 @@ extension UserViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: cellId)
+        let cell = UITableViewCell(style: .subtitle, reuseIdentifier: cellId)
         let user = viewModel.users[indexPath.row]
-        cell.textLabel?.text = user.name
+
+        var content = cell.defaultContentConfiguration()
+        content.text = user.name
+        content.secondaryText = user.email
+        content.secondaryTextProperties.color = .systemGray
+
+        cell.contentConfiguration = content
+
         return cell
     }
 }
